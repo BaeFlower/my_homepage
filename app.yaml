@@ -1,0 +1,19 @@
+application: geuleego
+version: 1
+runtime: php
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  static_files: \1
+  upload: (.*\.(bmp|gif|ico|jpeg|jpg|png))
+
+- url: /css
+  static_dir: css
+
+- url: /js
+  static_dir: js
+
+- url: /.*
+  script: index.html

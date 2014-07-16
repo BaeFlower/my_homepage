@@ -1,0 +1,329 @@
+@import url(http://fonts.googleapis.com/earlyaccess/dhyana.css);
+
+@font-face {
+	font-family: "NanumBarunGothic";
+	src:url("./fonts/NanumBarunGothic.ttf");
+}
+
+* {
+	margin:0px;
+	padding:0px;
+	font-family:"NanumBarunGothic";
+}
+
+#container {
+	/*
+	width:980px;
+	*/
+}
+
+#header {
+	width:100%;
+	border-bottom:1px solid #dfe1e2;
+	height:203px;
+	
+}
+
+#title {
+	font-size:30px;
+	font-weight:bold;
+	/*
+	font-family:'alef hebrew';
+	font-family:'Amiri';
+	*/
+	font-family:"dhyana";
+	margin-top:20px;
+	text-align:center;
+}
+
+div#icons {
+	text-align:center;
+	margin-bottom:20px;
+	min-width:650px;
+}
+
+.iconImg {
+	width:80px;
+	height:80px;
+	display:inline-block;
+	margin:40px 40px 0px 0px;
+	
+
+}
+
+.iconImg.iconAnc {
+	margin:0px;
+}
+
+.activeIcon i, .activeIcon p {
+	color:#2990ea;
+}
+
+.fa {
+	color:#c2c7c9;
+	cursor:pointer;
+}
+
+.menuLink {
+	text-decoration:none;
+}
+
+.menus {
+	color:#9aa4a7;
+	cursor:pointer;
+	font-family:'Nanumgothic';
+}
+
+
+#contents {
+	/*
+	background-color:#f8f8f8;	
+	*/	
+}
+
+/*------------------------------------------profile-----------------------------------------*/
+
+div#profileIntroDiv {
+	padding:20px;
+
+}
+
+div#profileDiv {
+	width: 50%;
+	min-width:600px;
+	float:left;
+	padding:0;
+	/*
+	background-color:#f8f8f8;
+	*/
+}
+
+div#introDiv {
+	width: 50%;
+	float:left;
+	padding:0;
+
+	/*
+	background-color:#f8f8f8;
+	*/
+}
+
+h1#introH1 {
+	margin-bottom:20px;
+}
+
+#introList {
+	list-style:none;
+}
+
+span.introTitles {
+	font-weight: bold;
+	font-size:1.3em;
+}
+
+span#introSpanLast {
+
+}
+
+
+#profileTable {
+	/*
+	background-color:#f8f8f8;
+	*/
+}
+
+#profileTable td.tdAttr {	
+	width:80px;
+	text-align:left;
+
+}
+
+#profileTable td {	
+	padding-bottom:0px;
+	vertical-align: middle;
+
+}
+
+#profileTable td.topTd {
+	border:0;
+}
+
+
+#myPhoto {
+	border-radius:5px;
+	width:200px;
+
+}
+
+.activeFile {
+
+}
+
+
+.table {
+	width:600px;
+	margin:auto;
+}
+
+/* ----------------------------------------- diary part-------------------------------------- */
+
+div#diaryPanelPart {
+	padding:20px;
+}
+
+.form-control {
+	width:350px;
+}
+
+div.diaryPart {
+	float:left;
+	width:370px;
+	text-align:center;
+	padding:10px;
+	margin-left:35px;
+}
+
+#ta {
+	margin-bottom:10px;
+
+	background: url(http://i.stack.imgur.com/ynxjD.png) repeat-y;
+	/*
+	width: 600px;
+	height: 300px;
+
+	*/
+	
+	font: normal 14px verdana;
+	line-height: 25px;
+	padding: 2px 10px;
+	border: solid 1px #ddd;
+}
+
+.panel.panel-default {
+	width:200px; 
+	height:200px;
+	float:left;
+	margin:10px;
+	background-color:#ffffbb;
+}
+
+.panel-body {
+	padding:5px;
+}
+
+.btn.btn-default {
+	width:100px;
+}
+
+/* ----------------------------------------to do list part ---------------------------------------- */
+
+div#toDoListPart {
+	margin:10px;
+	padding:20px;
+}
+
+.toDoListUl {
+	list-style: none;
+	width:330px;
+	float:left;
+	margin-left: 10px;
+	position:relative;
+}
+
+.iconClose {
+	position:absolute;
+	margin-top:-30px;
+	margin-left:300px;
+}
+
+input#firstLi {
+	background-color: #0b4071;
+	color:#d0cdcc;
+	border-radius: 3px 3px 0px 0px;
+	height:45px;
+}
+
+input[type="checkbox"].chkList {
+	position:absolute;
+	margin:10px 0 0 8px;
+}
+
+
+.form-control.fc-input {
+	width:330px;
+	display:inline-block;
+	/*
+	border-bottom:1px dashed #cccccc;
+	*/
+	border-radius:0;
+}
+
+.fc-input.fc-inputNotFirst {
+	text-indent:20px;
+}
+
+.toDoListPart.listPart{
+	margin:0;
+	width:80%;
+	float:left;
+}
+
+.toDoListPart.buttonPart {
+	margin:0 0 10px 0;
+	width:20%;
+	float:left;
+	text-align:center;
+	min-width:181px;
+}
+
+button#btnAddToDoList {
+	width:150px;
+}
+
+/*-------------------------------------------study part--------------------------------------*/
+
+div#studyPart {
+	padding:20px;
+	width:80%;
+	margin:0 auto;
+}
+
+.form-control.studyTa {
+	width:100%;
+	border:1px solid #dedede;
+
+}
+
+/*------------------------------------------------------like------------------------------------------*/
+.row.likePart {
+	padding:20px;
+}
+
+
+/*------------------------------------------------------footer-------------------------------------*/
+
+
+#footer {
+
+	/*	
+	height:50px;	
+	position:absolute;
+	width:100%;
+	left:0;
+	bottom:0px;
+	
+	*/
+	border-top:1px solid #dfe1e2;
+	text-align:center;
+	background-color:#ffffff;
+
+	position:fixed; 
+         clear:left; 
+         float:left; 
+         width:100%; 
+               
+         left:0; 
+         bottom:0px;
+         margin-top:-20px;
+         padding-top:11px;
+}

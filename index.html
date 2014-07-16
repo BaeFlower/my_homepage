@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+
+	<link type="text/css" rel="stylesheet" href="./css/bootstrap.css">
+	<link type="text/css" rel="stylesheet" href="./css/css/font-awesome.css"/>
+	<link type="text/css" rel="stylesheet" href="./css/style.css" />
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js "></script>
+	<script type="text/javascript" src="./js/bootstrap.js"></script>
+	<script type="text/javascript" src="./js/script.js"></script>
+
+</head>
+
+<body>
+
+	<div id="container">
+
+		<div id="header">			
+
+			<p id="title">BAE FLOWER</p>
+			
+			<div id="icons">				
+				<li class="iconImg activeIcon" id="iconLi_0">
+					<a href="#" style="text-decoration:none; " id="iconAnc_0" class="iconImg iconAnc">
+						<i class="fa fa-user fa-5x "></i>
+						<p class="menus ">profile</p>
+					</a>
+				</li>
+
+				<li class="iconImg" id="iconLi_1">
+					<a href="#" style="text-decoration:none; " id="iconAnc_1" class="iconImg iconAnc">
+						<i class="fa fa-pencil fa-5x"></i>
+						<p class="menus">낙서</p>
+					</a>
+				</li>
+
+				<li class="iconImg" id="iconLi_2">
+					<a href="#" style="text-decoration:none; " id="iconAnc_2" class="iconImg iconAnc">
+						<i class="fa fa-history fa-5x"></i>	
+						<p class="menus">toDoList</p>
+					</a>
+				</li>
+
+				<li class="iconImg" id="iconLi_3">
+					<a href="#" style="text-decoration:none; " id="iconAnc_3" class="iconImg iconAnc">
+						<i class="fa fa-book fa-5x"></i>
+						<p class="menus">study</p>
+					</a>
+				</li>
+
+				<li class="iconImg" id="iconLi_4">
+					<a href="#" style="text-decoration:none; " id="iconAnc_4" class="iconImg iconAnc">
+						<i class="fa fa-moon-o fa-5x"></i>	
+						<p class="menus" style="">좋아요</p>
+					</a>
+				</li>
+
+			</div>
+		</div>
+
+		<div id="contents">
+		</div>
+		
+		
+		<template id="template0">
+
+			<div id="profileIntroDiv">
+
+				<div id="profileDiv" class="col-xs-6 col-md-4">
+					<table id="profileTable" class="table">
+						<tr>
+							<td rowspan="6" class="topTd"><img id="myPhoto" src="./img/me.png" /></td>
+						</tr>
+						<tr>
+							<td class="tdAttr topTd">이름</td>
+							<td class="topTd">:&nbsp;&nbsp;배꽃and솔</td>
+						</tr>
+						<tr>
+							<td class="tdAttr">이름 뜻</td>
+							<td>:&nbsp;&nbsp;말 그대로</td>
+						</tr>
+						<tr>
+							<td class="tdAttr">관심사</td>
+							<td>:&nbsp;&nbsp;Squash, This, Game of Thrones, </td>
+						</tr>
+						<tr>
+							<td class="tdAttr">살았던 곳</td>
+							<td>:&nbsp;&nbsp;거제시, 목포시, KL, Gandia, 수원시</td>
+						</tr>
+						<tr>
+							<td class="tdAttr">삶의 목표</td>
+							<td>:&nbsp;&nbsp;즐거운 아침, 뿌듯한 저녁, 맛있는 식사</td>
+						</tr>
+					</table>
+				</div>	
+
+				<div id="introDiv" class="col-xs-6 col-md-4">				
+
+					<h1 id="introH1">이곳은,</h1>
+
+					<ul id="introList">
+						<li><p><span class="introTitles">Profile</span> 나와 이곳에 대한 간단한 소개</p></li>
+						<li><p><span class="introTitles">낙서</span> 하고 싶은 말, 적고 싶은 말을 간단히 저장</p></li>
+						<li><p><span class="introTitles">ToDoList</span> 해야될 일들을 정리</p></li>
+						<li><p><span class="introTitles">Study</span> 관심있는 주제들에 대한 노트</p></li>
+						<li><p><span class="introTitles">좋아요</span> 내가 좋아하는 것, 관심있는 것, 즐거워하는 모든 것들<span id="introSpanLast">을 위한 곳 입니다</span></p></li>
+					</ul>
+				</div>
+
+			</div>
+		</template>
+
+		<template id="template1">
+			<div id="diaryPanelPart">
+				<div class="diaryPart">
+					<textarea class="form-control" rows="5"  id="ta"></textarea>
+					<button type="buttom" class="btn btn-default">OK</buttom>
+					</div>
+
+					<div class=" panels" >
+						<div class="panel panel-default ">
+							<div class="panel-body">
+								<p>할리스에서 공부하려니 갑자기 피곤해지네</p>
+							</div>
+						</div>
+					</div>
+
+					<div class=" panels" >
+						<div class="panel panel-default ">
+							<div class="panel-body">
+								<p><a href="http://www.codecademy.com">http://www.codecademy.com</a></p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</template>		
+
+			<template id="template2">
+
+				<div id="toDoListPart">
+
+					<div class="toDoListPart buttonPart">
+						<button class="btn btn-default" id="btnAddToDoList" onclick="addToDoList()">add ToDoList</button>
+					</div>
+
+					<div class="toDoListPart listPart">
+						<ul class="toDoListUl">
+							<li>
+								<input type="text" class="form-control fc-input" id="firstLi" placeholder="your to do list"  value="멋사"/>
+								<i class="fa fa-times iconClose" ></i>
+							</li>	
+							<li>
+								<input type="checkbox" class="chkList">
+								<input type="text" class="form-control fc-input fc-inputNotFirst" value="python 끝내기">
+							</li>
+							<li>
+								<input type="checkbox" class="chkList">
+								<input type="text" class="form-control fc-input fc-inputNotFirst" value="홈페이지 만들기">
+							</li>
+							<li>
+								<input type="checkbox" class="chkList">
+								<input type="text" class="form-control fc-input fc-inputNotFirst" value="스터디!">
+							</li>
+							<li>
+								<input type="checkbox" class="chkList">
+								<input type="text" class="form-control fc-input fc-inputNotFirst" >
+							</li>
+							<li>
+								<input type="checkbox" class="chkList">
+								<input type="text" class="form-control fc-input fc-inputNotFirst" >
+							</li>
+						</ul>
+
+						<ul class="toDoListUl">
+							<li>
+								<input type="text" class="form-control fc-input" id="firstLi" placeholder="your to do list"  >
+								<i class="fa fa-times iconClose" ></i>
+							</li>
+							<li>
+								<input type="checkbox" class="chkList">
+								<input type="text" class="form-control fc-input fc-inputNotFirst" >
+							</li>	
+							<li>
+								<input type="checkbox" class="chkList">
+								<input type="text" class="form-control fc-input fc-inputNotFirst" >
+							</li>
+							<li>
+								<input type="checkbox" class="chkList">
+								<input type="text" class="form-control fc-input fc-inputNotFirst" >
+							</li>
+							<li>
+								<input type="checkbox" class="chkList">
+								<input type="text" class="form-control fc-input fc-inputNotFirst" >
+							</li>
+							<li>
+								<input type="checkbox" class="chkList">
+								<input type="text" class="form-control fc-input fc-inputNotFirst" >
+							</li>
+						</ul>
+
+						<ul class="toDoListUl">
+							<li>
+								<input type="text" class="form-control fc-input" id="firstLi" placeholder="your to do list"  />
+								<i class="fa fa-times iconClose" ></i>
+							</li>	
+							<li>
+								<input type="checkbox" class="chkList">
+								<input type="text" class="form-control fc-input fc-inputNotFirst" >
+							</li>	
+							<li>
+								<input type="checkbox" class="chkList">
+								<input type="text" class="form-control fc-input fc-inputNotFirst" >
+							</li>
+							<li>
+								<input type="checkbox" class="chkList">
+								<input type="text" class="form-control fc-input fc-inputNotFirst" >
+							</li>
+							<li>
+								<input type="checkbox" class="chkList">
+								<input type="text" class="form-control fc-input fc-inputNotFirst" >
+							</li>
+							<li>
+								<input type="checkbox" class="chkList">
+								<input type="text" class="form-control fc-input fc-inputNotFirst" >
+							</li>
+						</ul>
+					</div>				
+				</div>
+			</template>		
+
+			<template id="template3">
+				<div id="studyPart" >
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+						<li class="active"><a href="#home" role="tab" data-toggle="tab">Python</a></li>
+						<li><a href="#profile" role="tab" data-toggle="tab">jQuery</a></li>
+						<li><a href="#messages" role="tab" data-toggle="tab">HTML&CSS</a></li>
+
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane active" id="home">
+							<textarea class="form-control studyTa" rows="5"  id="ta"></textarea>
+						</div>
+						<div class="tab-pane" id="profile">
+							<textarea class="form-control studyTa" rows="5"  id="ta"></textarea>
+						</div>
+						<div class="tab-pane" id="messages">
+							<textarea class="form-control studyTa" rows="5"  id="ta"></textarea>
+						</div>
+						<div class="tab-pane" id="settings">
+							<textarea class="form-control studyTa" rows="5"  id="ta"></textarea>
+						</div>
+					</div>
+				</div>
+			</template>		
+
+			<template id="template4">
+				
+					<div class="row likePart">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<img src="./img/good.png" data-src="holder.js//300x300" alt="good">
+								<div class="caption">
+									<h3>Amalpi</h3>
+									<p>시원한 맥주는 언제나 옳다!</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<img src="./img/bar.png" data-src="holder.js//300x300" alt="sea">
+								<div class="caption">
+									<h3>Barcelona</h3>
+									<p>Couch surfing했던 집 베란다 경치가 대박</p>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<img src="./img/sky.png" data-src="holder.js//300x300" alt="sky">
+								<div class="caption">
+									<h3>Amalpi</h3>
+									<p>떠나지 싫지만 가야지</p>
+								</div>
+
+							</div>
+						</div>
+					</div>
+			</template>	
+
+			<div id="footer">
+				<p>e-mail : ppocmila@gmail.com</p>
+			</div>
+		</div>
+	</body>
+
+	</html>
